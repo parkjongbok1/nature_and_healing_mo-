@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+/* Light 300 */
+/* Regular 400 */
+/* Medium 500 */
+/* Bold 700 */
+/* Black 900 */
+
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
+/* font-family: 'Gulzar', serif; */
+
+
+/* scroll Event */
+.ani {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: all 1s;
+}
+.ani-T {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: all 1s;
+}
+.ani-L {
+  opacity: 0;
+  transform: translateX(-26px);
+  transition: all 1s;
+}
+.ani-R {
+  opacity: 0;
+  transform: translateX(26px);
+  transition: all 1s;
+}
+
+.ani-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.ani-in-T {
+  opacity: 1;
+  transform: translateY(0);
+}
+.ani-in-L {
+  opacity: 1;
+  transform: translateX(0);
+}
+.ani-in-R {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.t-delay0_1 {
+  transition-delay: 0.1s;
+}
+.t-delay0_2 {
+  transition-delay: 0.2s;
+}
+.t-delay0_3 {
+  transition-delay: 0.3s;
+}
+.t-delay0_4 {
+  transition-delay: 0.4s;
+}
+.t-delay0_5 {
+  transition-delay: 0.5s;
+}
+.t-delay0_6 {
+  transition-delay: 0.6s;
+}
+.t-delay0_7 {
+  transition-delay: 0.7s;
+}
+.t-delay0_8 {
+  transition-delay: 0.8s;
+}
+.t-delay0_9 {
+  transition-delay: 0.9s;
+}
+.t-delay1 {
+  transition-delay: 1s;
+}
+
+/* wrap */
+html {
+  font-family: "Noto Sans KR", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  color: #000;
+}
+.wrep {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* pop_link */
+.pop_link{
+  width: 100%;
+  height: 11.1111vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  transition: 1s;
+}
+.pop_link.pop_active{
+  bottom: -10%;
+}
+.pop_link .link{
+  width: 50%;
+  height: 100%;
+  background: #000;
+}
+.pop_link .link.link01{
+  background: #fff;
+  border: 3px solid black;
+  box-sizing: border-box;
+}
+.pop_link .link.link02{}
+.pop_link .link a{
+  font-size: 4.1667vw;
+  font-weight: 300;
+  letter-spacing: -0.3vw;
+  color: #000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pop_link .link.link01 a{
+  font-weight: 500;}
+.pop_link .link.link02 a{
+  color: #fff;
+}
+
+/* header */
+.header{
+  width: 100%;
+  height: 14.5833vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: 0.3s;
+}
+.header.active{
+  background: rgba(255, 255, 255, 0.5);
+}
+.header .inner{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-cont{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-cont .logo{
+  width: 31.2500vw;
+  margin-left: 8.3333vw;
+}
+.header-cont .logo a{
+  width: 100%;
+}
+.header-cont .logo a img{
+  width: 100%;
+}
+.header-cont .logo,
+.header-cont .menu{
+  position: relative;
+  z-index: 10000;
+}
+.header-cont .menu{
+  width: 6.1111vw;
+  height: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 8.3333vw;
+}
+.header-cont .menu span{
+  width: 100%;
+  height: 0.6vw;
+  position: absolute;
+  background: #5b4034;
+  transition: 0.3s;
+}
+.header-cont .menu span:nth-child(1){
+  top: 0;
+}
+.header-cont .menu span:nth-child(2){
+  top: 50%;
+}
+.header-cont .menu span:nth-child(3){
+  top: 50%;
+}
+.header-cont .menu span:nth-child(4){
+  top: 100%;
+}
+
+.header-cont .menu.active span:nth-child(1),
+.header-cont .menu.active span:nth-child(4){
+  width: 0;
+  opacity: 0;
+}
+.header-cont .menu.active span:nth-child(2){
+  transform: rotate(45deg);
+}
+.header-cont .menu.active span:nth-child(3){
+  transform: rotate(-45deg);
+}
+
+/* bon hrader st */
+.meun-bar{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateY(-100%);
+  transition: 0.3s;
+  opacity: 0;
+  background: white;
+}
+.meun-bar.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+.menu-box{
+  width: 100%;
+  margin-top: 18vw;
+}
+.menu-box li{
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.menu-box li:nth-child(1){
+  border-top: 1px solid #ccc;
+}
+.menu-box li a{
+  width: 100%;
+  height: 100%;
+  padding: 5vw 11vw;
+  font-size: 4vw;
+  font-weight: 600;
+  display: block;
+}
+
+.menu-box .link {
+  cursor: pointer;
+  display: block;
+  padding: 4vw 10vw;
+  font-size: 4.5vw;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+  position: relative;
+  transition: all 0.4s ease;
+}
+.menu-box li:nth-child(1) .link {
+}
+.submenu {
+  display: none;
+  background: #bd542e;
+}
+.submenu li {
+  width: 100%;
+  height: 100%;
+}
+.submenu li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-decoration: none;
+  color: #f8e7db;
+  font-size: 3.8vw;
+  padding: 4vw 4vw 4vw 11vw;
+  transition: all 0.25s ease;
+}
+/* bon hrader en */
+
+/* footer */
+.footer{
+  height: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer span,
+.footer strong{
+  display: block;
+}
+.footer span.line{
+  width: 86.1111vw;
+  height: 1px;
+  background: #d6d6d6;
+}
+.footer p{
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 2.2222vw;
+  margin-bottom: 1.3889vw;
+}
+.footer .line.line_T{
+  margin-bottom: 5.6944vw;
+}
+.footer .line.line_B{
+  margin: 5.6944vw 0;
+}
+.footer p:nth-child(7){
+  margin-bottom: 5.6944vw;
+}
+.footer strong{
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 2.2222vw;
+  text-align: center;
+  margin-bottom: 5.6944vw;
+  line-height: 3.5vw;
+}
+.footer .sns{
+  width: 27.7778vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .sns a{
+  width: 5vw;
+}
+.footer .sns a img{
+  width: 100%;
+}
+.footer h3{  
+  font-size: 2.2222vw;
+  color: #161616;
+  font-weight: 700;
+  letter-spacing: -0.1vw;
+}
