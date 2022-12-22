@@ -40,6 +40,7 @@
 .visual_slider{
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .visual_slider div{
   /* width: 100%; */
@@ -49,6 +50,33 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.visual_slider .slick-dots{
+  position: absolute;
+  left: 50%;
+  bottom: 6.9444vw;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 31.9444vw;
+  height: 0.7vw;
+}
+.visual_slider .slick-dots li{
+  width: 4.1667vw;
+  height: 100%;
+  background: #fff;
+  cursor: pointer;
+  margin: 0 0.7vw;
+  transition: 0.3s;
+}
+.visual_slider .slick-dots li.slick-active{
+  background: #111111;
+}
+.visual_slider .slick-dots li button{
+  border: 0;
+  font-size: 0;
+  opacity: 0;
 }
 
 /* introduction */
