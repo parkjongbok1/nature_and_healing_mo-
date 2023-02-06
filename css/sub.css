@@ -3,10 +3,10 @@
 }
 .sub_top {
   width: 100%;
-  height: 34vw;
+  height: 48vw;
   background: url("../image/sub/sub_bg.png") no-repeat top center;
   background-size: cover;
-  margin-top: 14.5833vw;
+  /* margin-top: 14.5833vw; */
 }
 .sub_inner {
   width: 100%;
